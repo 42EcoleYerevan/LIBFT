@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 01:59:42 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/01 01:59:51 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/01 20:47:10 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstnew(void *content)
 	t_list	*out;
 
 	out = (t_list *) malloc(sizeof(t_list *));
+	if (!out)
+		return (NULL);
 	out->content = content;
 	out->next = NULL;
 	return (out);

@@ -6,26 +6,21 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 14:15:53 by agladkov          #+#    #+#             */
-/*   Updated: 2023/01/22 14:15:54 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/01 20:17:25 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
 	char	*out;
-	int		i;
+	size_t	len;
 
-	out = malloc(sizeof(s1));
+	len = ft_strlen(s1);
+	out = malloc(len + 1);
 	if (!out)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		out[i] = s1[i];
-		i++;
-	}
-	out[i] = 0;
+	ft_strlcpy(out, s1, len + 1);
 	return (out);
 }

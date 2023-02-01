@@ -1,4 +1,5 @@
 NAME = libft.a
+
 MODULES = ft_isalpha.o \
 		ft_isdigit.o \
 		ft_isalnum.o \
@@ -32,8 +33,9 @@ MODULES = ft_isalpha.o \
 		ft_putchar_fd.o \
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
-		ft_putnbr_fd.o \
-		ft_lstnew.o \
+		ft_putnbr_fd.o 
+
+BONUS = ft_lstnew.o \
 		ft_lstadd_front.o \
 		ft_lstsize.o \
 		ft_lstlast.o \
@@ -41,9 +43,14 @@ MODULES = ft_isalpha.o \
 		ft_lstdelone.o \
 		ft_lstiter.o \
 		ft_lstclear.o \
-		ft_lstmap.o
+		ft_lstmap.o \
+		$(MODULES)
+
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
@@ -51,9 +58,12 @@ $(NAME): $(MODULES)
 	ar r $(NAME) $(MODULES)
 
 clean:
-	rm -rf $(MODULES)
+	rm -rf $(BONUS)
 
 fclean:
-	rm -rf $(MODULES) $(NAME)
+	rm -f $(NAME)
 
-re: fclean all
+re: clean fclean all
+
+bonus: $(BONUS)
+	ar r $(NAME) $(BONUS)

@@ -6,14 +6,16 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:43:03 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/01 02:02:35 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/01 21:01:52 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 # define TRUE 1
 # define FALSE 0
