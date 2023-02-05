@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 01:56:42 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/01 01:59:29 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/05 18:25:34 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!new)
 		{
 			ft_lstclear(&first, del);
+			return (NULL);
 		}
 		ft_lstadd_back(&first, new);
 		lst = lst->next;

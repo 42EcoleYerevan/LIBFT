@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:39:08 by agladkov          #+#    #+#             */
-/*   Updated: 2023/01/30 17:21:29 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:14:44 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	srclen;
 	size_t	d;
 
+	if (!dst || !src)
+		return (0);
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	d = dstlen;

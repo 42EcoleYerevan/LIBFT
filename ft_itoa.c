@@ -6,11 +6,10 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:23:29 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/01 04:09:54 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:03:53 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	len_number(long n)

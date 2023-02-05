@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 14:16:09 by agladkov          #+#    #+#             */
-/*   Updated: 2023/01/23 15:39:52 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/02 18:07:37 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*out;
 
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	out = (char *) malloc(len * sizeof(char));
 	if (!out)
