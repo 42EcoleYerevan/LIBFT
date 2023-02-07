@@ -6,16 +6,19 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 14:16:30 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/02 19:44:28 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:34:36 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*out;
 
+	if (SIZE_MAX / size < count)
+		return (NULL);
 	out = malloc(count * size);
 	if (!out)
 		return (NULL);
