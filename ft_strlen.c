@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:40:20 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/01 19:44:10 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:05:10 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	n;
 
 	n = 0;
-	if (!s)
-		return (0);
 	while (s[n])
 		n++;
 	return (n);

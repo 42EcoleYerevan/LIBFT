@@ -52,18 +52,20 @@ CFLAGS = -Wall -Werror -Wextra
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME)
-
 $(NAME): $(MODULES)
 	ar r $(NAME) $(MODULES)
+
+all: $(NAME)
 
 clean:
 	rm -rf $(BONUS)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: clean fclean all
 
 bonus: $(BONUS)
 	ar r $(NAME) $(BONUS)
+
+.PHONY: all clean fclean re bonus
