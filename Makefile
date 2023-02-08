@@ -48,11 +48,12 @@ BONUS = ft_lstnew.o \
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
+HEADER = libft.h
 
-%.o : %.c
+%.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(MODULES)
+$(NAME): $(MODULES) $(HEADER)
 	ar r $(NAME) $(MODULES)
 
 all: $(NAME)

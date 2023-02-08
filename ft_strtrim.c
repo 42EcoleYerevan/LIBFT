@@ -36,9 +36,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s1++;
 	while (isin(set, *s1))
 		s1--;
-	out = (char *)malloc(s1 - tmp + 2);
+	out = ft_substr(tmp, 0, s1 - tmp + 1);
 	if (!out)
 		return (NULL);
-	ft_strlcpy(out, tmp, s1 - tmp + 2);
 	return (out);
 }
