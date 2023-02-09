@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 14:16:52 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/01 03:41:15 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/09 13:01:21 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*out;
 	size_t	i;
-	size_t  strlen;
+	size_t	strlen;
 
 	strlen = ft_strlen(s);
 	if (!s)
