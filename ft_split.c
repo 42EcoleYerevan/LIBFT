@@ -6,7 +6,7 @@
 /*   By: agladkov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 00:00:02 by agladkov          #+#    #+#             */
-/*   Updated: 2023/02/07 16:58:15 by agladkov         ###   ########.fr       */
+/*   Updated: 2023/02/09 13:20:59 by agladkov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int		count_words(const char *s, char c);
 int		len_word(const char *s, char c);
 void	free_2d_char(char **arr);
+char	**ft_strsplit(char **out, const char *s, char c);
 
 int	count_words(const char *s, char c)
 {
